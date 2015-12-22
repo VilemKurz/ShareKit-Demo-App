@@ -10,9 +10,9 @@
 #import "RootViewController.h"
 
 #import "SHKDropbox.h"
-#import "SHKGooglePlus.h"
-#import "SHKFacebook.h"
-#import "EvernoteSDK.h"
+//#import "SHKGooglePlus.h"
+//#import "SHKFacebook.h"
+//#import "EvernoteSDK.h"
 //#import "SHKBuffer.h"
 #import "PocketAPI.h"
 
@@ -54,14 +54,14 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-	[SHKFacebook handleDidBecomeActive];
-    [[EvernoteSession sharedSession] handleDidBecomeActive];
+	//[SHKFacebook handleDidBecomeActive];
+    //[[EvernoteSession sharedSession] handleDidBecomeActive];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application 
 {
 	// Save data if appropriate
-	[SHKFacebook handleWillTerminate];
+	//[SHKFacebook handleWillTerminate];
 }
 
 - (BOOL)application:(UIApplication *)application 
@@ -76,14 +76,14 @@
     NSString *pocketPrefixKeyPart = [(NSString *)SHKCONFIG(pocketConsumerKey) substringWithRange:range];
     NSString *bundleID = [[NSBundle mainBundle] bundleIdentifier];
 
-    if ([scheme hasPrefix:[NSString stringWithFormat:@"fb%@", SHKCONFIG(facebookAppId)]]) {
+    if /*([scheme hasPrefix:[NSString stringWithFormat:@"fb%@", SHKCONFIG(facebookAppId)]]) {
         return [SHKFacebook handleOpenURL:url sourceApplication:sourceApplication];
     } else if ([[scheme lowercaseString] isEqualToString:[bundleID lowercaseString]]) {
         return [SHKGooglePlus handleURL:url sourceApplication:sourceApplication annotation:annotation];
-    } else if ([scheme hasPrefix:[NSString stringWithFormat:@"db-%@", SHKCONFIG(dropboxAppKey)]]) {
+    } else if */([scheme hasPrefix:[NSString stringWithFormat:@"db-%@", SHKCONFIG(dropboxAppKey)]]) {
         return [SHKDropbox handleOpenURL:url];
-    } else if ([[NSString stringWithFormat:@"en-%@", [[EvernoteSession sharedSession] consumerKey]] isEqualToString:[url scheme]]) {
-        return [[EvernoteSession sharedSession] canHandleOpenURL:url];
+    /*} else if ([[NSString stringWithFormat:@"en-%@", [[EvernoteSession sharedSession] consumerKey]] isEqualToString:[url scheme]]) {
+        return [[EvernoteSession sharedSession] canHandleOpenURL:url];*/
     } else if ([scheme hasPrefix:[NSString stringWithFormat:@"buffer%@", SHKCONFIG(bufferClientID)]]) {
         //return [SHKBuffer handleOpenURL:url];
     }else if ([scheme hasPrefix:[NSString stringWithFormat:@"pocketapp%@", pocketPrefixKeyPart]]) {

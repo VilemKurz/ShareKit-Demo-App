@@ -32,7 +32,7 @@
 #import "SHKDropbox.h"
 
 #define SHARE_FILE_WITH_PATH 1
-#define SHARE_LARGE_VIDEO 1
+#define SHARE_LARGE_VIDEO 0
 
 @interface ExampleShareFile () <UIWebViewDelegate>
 

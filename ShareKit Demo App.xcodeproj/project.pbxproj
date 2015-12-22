@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73E1B9FCDFDF44E7A56A1997 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C74A0F6471474BAA9279AC7A /* libPods.a */; };
+		71AEBEB560758B4A7B618C76 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD0E7C3A355BA72102D8ED /* libPods.a */; };
 		7A101A2C197FCFB600396A3B /* ExampleShareFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A15C72E197C613900B0DD69 /* ExampleShareFile.m */; };
 		7A101A2D197FCFBA00396A3B /* ExampleShareImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A15C730197C613900B0DD69 /* ExampleShareImage.m */; };
 		7A101A2E197FCFBD00396A3B /* ExampleShareLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A15C732197C613900B0DD69 /* ExampleShareLink.m */; };
@@ -454,7 +454,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3A8BB8C3E0940F7F7CB5A352 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		533FE9ECF4A98F227DC9D7DA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		63AD0E7C3A355BA72102D8ED /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CE085BD6BB34BEC0D345F2E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7A15C6FB197C5E2800B0DD69 /* ShareKit Demo App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShareKit Demo App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A15C6FE197C5E2800B0DD69 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7A15C700197C5E2800B0DD69 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -531,8 +533,6 @@
 		7ACDD3D1197D6E5500373DC3 /* ShareKit Demo App (CocoaPods)Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShareKit Demo App (CocoaPods)Tests-Info.plist"; sourceTree = "<group>"; };
 		7ACDD3D3197D6E5500373DC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7ACDD3D5197D6E5500373DC3 /* ShareKit_Demo_App__CocoaPods_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareKit_Demo_App__CocoaPods_Tests.m; sourceTree = "<group>"; };
-		9D22EBD91737A7B71B223511 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		C74A0F6471474BAA9279AC7A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -582,13 +582,22 @@
 				7ACDD3B5197D6E5400373DC3 /* CoreGraphics.framework in Frameworks */,
 				7ACDD3B6197D6E5400373DC3 /* UIKit.framework in Frameworks */,
 				7ACDD3B4197D6E5400373DC3 /* Foundation.framework in Frameworks */,
-				73E1B9FCDFDF44E7A56A1997 /* libPods.a in Frameworks */,
+				71AEBEB560758B4A7B618C76 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AFACE51BF86520D195363AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CE085BD6BB34BEC0D345F2E /* Pods.debug.xcconfig */,
+				533FE9ECF4A98F227DC9D7DA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7A15C6F2197C5E2800B0DD69 = {
 			isa = PBXGroup;
 			children = (
@@ -600,7 +609,7 @@
 				7ACDD3CF197D6E5400373DC3 /* ShareKit Demo App (CocoaPods)Tests */,
 				7A15C6FD197C5E2800B0DD69 /* Frameworks */,
 				7A15C6FC197C5E2800B0DD69 /* Products */,
-				E6668706742C547E206D3B9C /* Pods */,
+				1AFACE51BF86520D195363AC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -649,7 +658,7 @@
 				7A15C700197C5E2800B0DD69 /* CoreGraphics.framework */,
 				7A15C702197C5E2800B0DD69 /* UIKit.framework */,
 				7A15C717197C5E2800B0DD69 /* XCTest.framework */,
-				C74A0F6471474BAA9279AC7A /* libPods.a */,
+				63AD0E7C3A355BA72102D8ED /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -861,15 +870,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E6668706742C547E206D3B9C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9D22EBD91737A7B71B223511 /* Pods.debug.xcconfig */,
-				3A8BB8C3E0940F7F7CB5A352 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -901,6 +901,7 @@
 				7ACDD3B0197D6E5400373DC3 /* Frameworks */,
 				7ACDD3B1197D6E5400373DC3 /* Resources */,
 				9ECA1C81C273481FAD3AB551 /* Copy Pods Resources */,
+				52CB25C3A8B35D7F505F95FD /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1356,6 +1357,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		52CB25C3A8B35D7F505F95FD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9ECA1C81C273481FAD3AB551 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1533,6 +1549,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Submodules/ShareKit/Frameworks",
@@ -1557,6 +1574,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Submodules/ShareKit/Frameworks",
@@ -1578,18 +1596,20 @@
 		};
 		7ACDD3D7197D6E5700373DC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D22EBD91737A7B71B223511 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 6CE085BD6BB34BEC0D345F2E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShareKit Demo App (CocoaPods)/ShareKit Demo App (CocoaPods)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "ShareKit Demo App/ShareKit Demo App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cocoaminers.ShareKit-demo-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1598,14 +1618,16 @@
 		};
 		7ACDD3D8197D6E5700373DC3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A8BB8C3E0940F7F7CB5A352 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 533FE9ECF4A98F227DC9D7DA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShareKit Demo App (CocoaPods)/ShareKit Demo App (CocoaPods)-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "ShareKit Demo App/ShareKit Demo App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cocoaminers.ShareKit-demo-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
