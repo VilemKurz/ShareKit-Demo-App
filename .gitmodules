@@ -1,0 +1,4 @@
+[submodule "Submodules/ShareKit"]
+	path = Submodules/ShareKit
+	url = https://github.com/VilemKurz/ShareKit.git
+	branch = DropboxDemo
